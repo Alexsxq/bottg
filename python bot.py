@@ -46,7 +46,7 @@ TEXTS = {
 }
 
 # ID администратора (замените на реальный)
-ADMIN_CHAT_ID = "ВАШ_CHAT_ID_АДМИНА"
+ADMIN_CHAT_ID = "6561749433"
 
 def start(update: Update, context: CallbackContext) -> int:
     """Начинаем разговор и спрашиваем про язык."""
@@ -135,7 +135,7 @@ def cancel(update: Update, context: CallbackContext) -> int:
 def main() -> None:
     """Запускаем бота."""
     # Замените 'YOUR_BOT_TOKEN' на токен вашего бота
-    updater = Updater("YOUR_BOT_TOKEN")
+    updater = Updater("7713535983:AAGcNVl86bq7VCNDfunvKJ2nZmw-1Qu7HZE")
     dispatcher = updater.dispatcher
 
     conv_handler = ConversationHandler(

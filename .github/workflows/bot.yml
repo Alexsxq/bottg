@@ -1,0 +1,13 @@
+name: Deploy Bot
+on: [push]
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          pip install python-telegram-bot
+          python bot.py

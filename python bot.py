@@ -135,7 +135,7 @@ def cancel(update: Update, context: CallbackContext) -> int:
 def main() -> None:
     """Запускаем бота."""
     # Замените 'YOUR_BOT_TOKEN' на токен вашего бота
-    updater = Updater("7713535983:AAGDrdsDItQNfullFLo4dUPTUNN7mFW5OPA")
+    updater = Updater("7713535983:AAHdvuikGwm4jVP9ZG8bVu5TctoihvWz9Bo")
     dispatcher = updater.dispatcher
 
     conv_handler = ConversationHandler(

@@ -1,13 +1,18 @@
-name: Deploy Bot
-on: [push]
+name: Run Telegram Bot
+on: [workflow_dispatch]  # Чтобы запускать вручную
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install python-telegram-bot
       - name: Run bot
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        run: |
-          pip install python-telegram-bot
-          python bot.py
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  # Токен возьмётся из секретов
+        run: python bot.py
